@@ -5,8 +5,9 @@ import { useState } from "react"
 import { Input } from "../ui/input"
 import { Button } from "../ui/button"
 
-export function SigninForm() {
+export function SignupForm() {
   const router = useRouter()
+  const [nameField, setNameField] = useState("")
   const [emailField, setEmailField] = useState("")
   const [passwordField, setPasswordField] = useState("")
 
@@ -16,6 +17,12 @@ export function SigninForm() {
 
   return (
     <>
+      <Input
+        placeholder="Digite seu nome"
+        value={nameField}
+        onChange={(texto) => setNameField(texto)}
+      />
+
       <Input
         placeholder="Digite seu email"
         value={emailField}
@@ -29,8 +36,8 @@ export function SigninForm() {
         password
       />
 
-      <Button 
-        label="Entrar"
+      <Button
+        label="Criar conta"
         onClick={handleEnterButton}
         size={1}
       />

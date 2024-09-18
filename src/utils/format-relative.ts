@@ -5,6 +5,6 @@ import 'dayjs/locale/pt-br'
 dayjs.extend(relativeTime);
 dayjs.locale('pt-br')
 
-export function tempoDesdePost(dataDoPost: string | Date): string {
+export function tempoDesdePost(dataDoPost: string | Date) {
   return dayjs(dataDoPost).fromNow();
 }
